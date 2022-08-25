@@ -1,0 +1,108 @@
+
+GET http://localhost:8080/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMyIsImV4cCI6MTY2MDg3NDM1NiwiaWF0IjoxNjYwODczNzU2fQ.KoLhmNhJag5Tl0_F6AtzQWSnv2yHM4gZUZslCrUCJ8Q
+
+###
+POST  http://localhost:8080/api/login
+Content-Type: application/json
+
+{
+    "username":"user3",
+    "password":"123456"
+}
+
+
+###
+POST http://localhost:8080/api/register
+Content-Type: application/json
+
+{
+    "username":"testuser1",
+    "password":"1"
+}
+
+###
+GET http://localhost:8080/test
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMyIsImV4cCI6MTY2MDYzNTE3OCwiaWF0IjoxNjYwNjM0NTc4fQ.4b6uWeBB4lnG1sJ0nuwSiuRpIzhCJjlM5Z0D7h7dSjU
+
+###
+POST  http://localhost:8080/student/addStudent
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMyIsImV4cCI6MTY2MTIzODI1MSwiaWF0IjoxNjYxMjM0NjUxfQ.iN2mnfvuppJsbwE2P0BbOabSt0CI4lbHrN8Nu3NDEFU
+
+{
+    "studentName":"user31"
+}
+
+###
+POST  http://localhost:8080/student/addStudentInfo
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMyIsImV4cCI6MTY2MTIzMDI1MiwiaWF0IjoxNjYxMjI2NjUyfQ.GGcHadLKAJ3PwibkV4nx-ptLHQeEY2nzFL4-1c8sGQ4
+
+{
+    
+    "student":{
+        "student_id":{
+      "timestamp": 1661226913,
+      "date": "2022-08-23T03:55:13.000+00:00"
+    },
+        "studentName":"tuan anh",
+        "studentCode":"STU412"
+    },
+    
+    "dateOfBirth":"2022-08-17",
+    "studentAddress":"Bình Dương",
+    "averageScore":"4.23"
+}
+
+###
+GET http://localhost:8080/student/all
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMyIsImV4cCI6MTY2MTIyOTQ0MywiaWF0IjoxNjYxMjI1ODQzfQ.2aOQQ4DNlDu2YZjFPD0UAYm61HoIcMDsM0iT0MuevHg
+###
+GET http://localhost:8080/student/loop
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMyIsImV4cCI6MTY2MDcxMjIxOCwiaWF0IjoxNjYwNzExNjE4fQ.9mw1l-TkDyJgqT8J-eopN-uvxflbue82az0FbjT3dw0
+
+###
+PUT http://localhost:8080/student/63046ed3e7ac227c6d5fd5f2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMyIsImV4cCI6MTY2MTI2MzAwNywiaWF0IjoxNjYxMjU5NDA3fQ.O0w3F5bIVikRYCRYMqw9C3TMFWPMJpKPgACG8NbI9zs
+
+{
+    "studentName":"test",
+    "studentCode":"STU331",
+    "student_id":"63046ed0e7ac227c6d5fd5f1",
+    "dateOfBirth":"2022-08-17",
+    "studentAddress":"ho chi minh",
+    "averageScore":"7.52"
+}
+
+
+
+####
+DELETE http://localhost:8080/student/delete/63046f16e7ac227c6d5fd5f4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMyIsImV4cCI6MTY2MTI2NDUzMywiaWF0IjoxNjYxMjYwOTMzfQ.7l02rRlZpUQU_7Odk8-iRTK0dMhsouMFRWBucPESZEY
+
+####
+GET http://localhost:8080/student/62fc7305ed3b316b1ebb22c9
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMyIsImV4cCI6MTY2MDc4ODkyMSwiaWF0IjoxNjYwNzg4MzIxfQ.r5BVBSjwGXipPT1nq8h_MDDqrnUz8bu1-fMexD7k8nA
+
+###
+GET http://localhost:8080/api/auth
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMyIsImV4cCI6MTY2MTE0MzA2OCwiaWF0IjoxNjYxMTQyNDY4fQ.d_UAEnwHQ7VFLByDhBu3PEAXgIdMBI8i1fQDNxbiGbI
+
+###
+GET http://localhost:8080/student/63046ed3e7ac227c6d5fd5f2
+
+
+###
+POST http://localhost:8080/student/search
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMyIsImV4cCI6MTY2MTMzMDU3NCwiaWF0IjoxNjYxMzI2OTc0fQ.w_NhgKJIOodCpKQHCx6WPlhsXpX4O9UvSclZy-xJz2I
+
+{
+   "studentName":"tuan anh",
+    "studentCode":"STU325",
+    
+    "dateOfBirth":"2022-08-11"
+    
+}
